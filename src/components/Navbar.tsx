@@ -14,6 +14,9 @@ const Navbar = () => {
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">
+            <Link to="/ai-insights" className="text-gray-600 hover:text-primary transition-colors">
+              AI Insights
+            </Link>
             <Link to="/dashboard" className="text-gray-600 hover:text-primary transition-colors">
               Dashboard
             </Link>

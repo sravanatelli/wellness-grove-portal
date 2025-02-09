@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import FeatureDetails from "./pages/FeatureDetails";
 import Login from "./pages/Login";
+import AIInsights from "./pages/AIInsights";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/feature/:featureId" element={<FeatureDetails />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/ai-insights" element={<AIInsights />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
