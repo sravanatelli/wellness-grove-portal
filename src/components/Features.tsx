@@ -1,7 +1,8 @@
 
 import { Activity, Brain, ChartBar, Clock, Heart, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const features = [
+export const features = [
   {
     icon: Brain,
     title: "AI-Powered Insights",
@@ -47,14 +48,17 @@ const Features = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div
+            <Link
               key={index}
-              className="p-6 rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow glass-card hover-scale"
+              to={`/feature/${feature.title.toLowerCase().replace(/\s+/g, "-")}`}
+              className="block"
             >
-              <feature.icon className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
-            </div>
+              <div className="p-6 rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow glass-card hover-scale">
+                <feature.icon className="h-12 w-12 text-primary mb-4" />
+                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
