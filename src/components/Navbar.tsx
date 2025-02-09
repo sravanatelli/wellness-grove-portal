@@ -23,9 +23,12 @@ const Navbar = () => {
             <Link to="/progress" className="text-gray-600 hover:text-primary transition-colors">
               Progress
             </Link>
-            <button className="px-4 py-2 rounded-full bg-primary text-white hover:opacity-90 transition-opacity">
+            <Link 
+              to="/login" 
+              className="px-4 py-2 rounded-full bg-primary text-white hover:opacity-90 transition-opacity"
+            >
               Sign In
-            </button>
+            </Link>
           </div>
 
           <button className="md:hidden p-2">
