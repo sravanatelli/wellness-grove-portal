@@ -51,11 +51,13 @@ const Features = () => {
             <Link
               key={index}
               to={`/feature/${feature.title.toLowerCase().replace(/\s+/g, "-")}`}
-              className="block"
+              className="block group"
             >
-              <div className="p-6 rounded-2xl bg-white shadow-sm hover:shadow-md transition-shadow glass-card hover-scale">
-                <feature.icon className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+              <div className="p-8 rounded-2xl bg-white shadow-sm hover:shadow-md transition-all duration-300 glass-card hover:-translate-y-1">
+                <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="h-12 w-12 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
             </Link>
